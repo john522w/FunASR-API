@@ -5,7 +5,12 @@ from pydantic import model_validator
 from pydantic_settings import SettingsConfigDict,BaseSettings
 from .path_conf import BASE_PATH
 
+
 class Settings(BaseSettings):
+
+    """
+    配置
+    """
 
     model_config: ClassVar = SettingsConfigDict(
         env_file=f"{BASE_PATH}/.env",
